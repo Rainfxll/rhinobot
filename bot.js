@@ -69,6 +69,29 @@ bot.on("message", async message => {
     
 });
 
+// Nadawanie rangi po wejściu użytkownika na serwer.
+
+client.on ("guildMemberAdd", member => {  
+
+    var role = member.guild.roles.find ("name", "[RHINO] MEMBER");
+    member.addRole (role);
+    var role = member.guild.roles.find ("name", "╠-● POWIADOMIENIA");
+    member.addRole (role);
+    var role = member.guild.roles.find ("name", "╠-● UŻYTKOWNIK");
+    member.addRole (role);
+})
+
+client.on ("guildMemberRemove", member => {
+
+})  
+
+// Wiadomość powitalna.
+
+client.on("guildMemberAdd", function(member){
+    member.guild.channels.find("name", "🌠┃powitalnia").send(`(**SYSTEM**) Przywitajmy użytkownika o nazwie **${member}**, zapoznaj się z regulaminem!`)
+
+});
+
 bot.login(process.env.token);
 
 //restart
