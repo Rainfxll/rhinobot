@@ -1,9 +1,9 @@
-`!ping` **Check the bot ping** __Usage__: *!ping*
-`!id` **Gives you the id of user** __Usage__: *!id [@user]
-`!invite` **Gives you invite for the bot** __Usage__: *!invite*
-`!avatar` **Gives you someone's avatar** __Usage__: *!avatar [@user]*
-`!icon` **Gives you the server icon** __Usage__: *!icon*
-`!botinfo` **Gives the bot info** __Usage__: *!botinfo*
-`!userinfo` **Gives you the user info** __Usage__: *!userinfo [@user]*
-`!serverinfo` **Gives you the server info** __Usage__: *!serverinfo*
-`!finduser`  **Finds users with this name** __Usage__: *!finduser <name>*
+`!ping` **Sprawdź bota ping** __Użycie__: *!ping*
+`!id` **Daje ci id użytkownika** __Użycie__: *!id [@nazwa]
+`!invite` **Daje zaproszenie do bota** __Użycie__: *!invite*
+`!avatar` **Daje ci czyjś awatar** __Użycie__: *!avatar [@nazwa]*
+`!icon` **Daje ci ikonę serwera** __Użycie__: *!icon*
+`!botinfo` **Podaje informacje o bocie** __Użycie__: *!botinfo*
+`!userinfo` **Podaje informacje o użytkowniku** __Użycie__: *!userinfo [@nazwa]*
+`!serverinfo` **Podaje informacje o serwerze** __Użycie__: *!serverinfo*
+`!finduser`  **Znajduje użytkowników o tej nazwie** __Użycie__: *!finduser <nazwa>*
