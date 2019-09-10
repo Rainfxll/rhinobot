@@ -42,10 +42,10 @@ module.exports.run = async (bot, message, args) => {
     pidor.send(supEmbed)
 
     let chanEmbed = new Discord.RichEmbed()
-    .setTitle("Help")
+    .setTitle("Rhino BOT - HELP")
     .setColor("#0ff00")
-    .setFooter(`Help command used by: ${pidor.user.username}`)
-    .setDescription(`${pidor} Check your DMs`);
+    .setFooter(`Użył: ${pidor.user.username}`)
+    .setDescription(`${pidor} Wysłano w prywatnej wiadomości`);
 
     message.channel.send(chanEmbed).then(msg => {msg.delete(5000)});
 
