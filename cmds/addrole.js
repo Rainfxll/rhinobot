@@ -14,24 +14,24 @@ module.exports.run = async (bot, message, args) => {
 
   let xdemb = new Discord.RichEmbed()
   .setColor("#00ff00")
-  .setTitle(`Addrole command`)
-  .addField("Description:", "Add role to member", true)
-  .addField("Usage", "!addrole [user] [role]", true)
+  .setTitle(`Rhino BOT - DODODAWANIE ROLI`)
+  .addField("Funkcja:", "Nadawanie roli użytkownikowi", true)
+  .addField("Usage", "!addrole [nazwa] [rola]", true)
   .addField("Example", "!addrole @Odar Member")
 
-  if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("You don't have premmsions to do that!");
+  if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Nie możesz użyć tej komendy");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
   if(!rMember) return message.channel.send(xdemb);
 
   let role = args.join(" ").slice(22);
   if(!role) return message.channel.send("Specify a role!");
   let gRole = message.guild.roles.find(`name`, role);
-  if(!gRole) return message.channel.send("Couldn't find that role.");
+  if(!gRole) return message.channel.send("Nie mogę znaleść tej roli!");
 
-  if(rMember.roles.has(gRole.id)) return message.channel.send("This user already have that role.");
+  if(rMember.roles.has(gRole.id)) return message.channel.send("Ta osoba już ma tą role");
   await(rMember.addRole(gRole.id));
 
-    await message.channel.send(`***I just gave ${rMember.user.username} the ${gRole.name} role!***`)
+    await message.channel.send(`***Nadano użytkownikowi ${rMember.user.username} rola ${gRole.name} ***`)
 
     message.delete();
   
