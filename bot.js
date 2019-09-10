@@ -42,7 +42,7 @@ bot.user.setStatus('Online')
 
 bot.user.setActivity(`Ilość serwerów ${bot.guilds.size}| r!help`);
     
-    bot.channels.get("621016826700234785").setName(`📑┃Serwery: ${bot.guilds.size} /100`)
+    bot.channels.get("621021768148058162").setName(`📑┃Serwery: ${bot.guilds.size} /100`)
     
 
 try {
