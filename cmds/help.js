@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("Jeśli potrzebujesz pomocy wejdz na officialny serwer [Rhino BOT - Support Center](https://discord.gg/XznfRUU)")
     .setFooter("<> means required, [] means optional")
     .setTimestamp()
-    .addField("Contact", Aby zkontaktować się z twórcą wpisz `!contact`")
+    .addField("Contact", "`Aby zkontaktować się z twórcą wpisz `!contact`")
 
     pidor.send(supEmbed)
 
