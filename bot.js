@@ -40,7 +40,7 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
     
 bot.user.setStatus('Online')
 
-bot.user.setActivity(`Ilość serwerów ${bot.guilds.size}| r!help`);
+bot.user.setActivity(`Ilość serwerów ${bot.guilds.size} | v1.1`);
     
     bot.channels.get("621021768148058162").setName(`📑┃Serwery: ${bot.guilds.size}/100`)
     bot.channels.get("621027476935671809").setName(`📑┃Użytkownicy: ${bot.users.size}`)
