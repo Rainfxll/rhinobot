@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Discord.RichEmbed()
     .setColor("#00ff00")
     .setThumbnail(bicon)
-    .setTitle("Support Info")
-    .addField("To see the bot commands use", "`!help`")
-    .addField("To report bug use", "`!contact`")
-    .addField("If you need help with somehign else", "[Support Sever](https://discord.gg/zvvasbc)")
+    .setTitle("Rhino BOT - Informacje")
+    .addField("Aby zobaczyć komendy wpisz", "`!help`")
+    .addField("Aby zgłosić buga wpisz", "`!contact`")
+    .addField("Wejdż na officjalny serwer!", "[Rihno BOT - Support Center](https://discord.gg/XznfRUU)")
 
     message.channel.send(embed)
 
