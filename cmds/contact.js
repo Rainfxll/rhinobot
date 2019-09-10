@@ -25,15 +25,15 @@ module.exports.run = async (bot, message, args) => {
    .addField("Message: ", sayMessage)
    .setTimestamp()
 
-    bot.users.get("291221132256870400").send(contact);
+    bot.users.get("461215237002231808").send(contact);
 
     let embed = new Discord.RichEmbed()
     .setColor("#00ff00")
     .setTitle("Message Sent!")
-    .setDescription("Your contact message has been sent!")
+    .setDescription("Twoja wiadomość została wysłana")
     .addField("Reqested by ", Sender)
     .addField("Message: ", sayMessage)
-    .setFooter("Thanks you for contacting with the OdarBot support!")
+    .setFooter("Dziękujemy za wysłanie wiadomości do supportu Rhino BOT")
 
     message.channel.send(embed).then(msg => {msg.delete(10000)});
 
