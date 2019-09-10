@@ -1,7 +1,7 @@
-`!addrole` **Gives someone a role** __Usage__: *!addrole <@user> <role>*
-`!removerole` **Removes someone's role** __Usage__: *!removerole <@user> <role>*
-`!mute` **Mutes a user** __Usage__: *!mute <@user> <time>*
-`!unmute` ** Unmutes a user** __Usage__: *!unmute <@user>*
-`!kick` **Kicks a user from the server** __Usage__: *!kick <@user> <reason>*
-`!ban` **Bans a user from the server** __Usage__: *!ban <@user> <reason>*
-`!clear` **Clears the chat** __Usage__: *!clear <amount>*
+`!addrole` **Daje komuś rolę** __Użycie__: *!addrole <@nazwa> <rola>*
+`!removerole` **Usuwa czyjąś rolę** __Użycie__: *!removerole <@nazwa> <rola>*
+`!mute` **Wycisza użytkownika** __Użycie__: *!mute <@nazwa> <czas>*
+`!unmute` **Anuluje wyciszenie użytkownika** __Użycie__: *!unmute <@nazwa>*
+`!kick` **Wyrzuca użytkownika z serwera** __Użycie__: *!kick <@nazwa> <powód>*
+`!ban` **Zbanuje użytkownika z serwera** __Użycie__: *!ban <@nazwa> <powód>*
+`!clear` **Czyści czat** __Użycie__: *!clear <ilośc>*
