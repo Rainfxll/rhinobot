@@ -11,19 +11,19 @@ let xdemb = new Discord.RichEmbed()
         .addField("Usage:", `!ban [user] [reason]`, true)
         .addField("Example:", `!ban @Odar spam`)
 
-        if(!message.member.hasPermission("BAN_MEMBERS") && message.author.id !== "291221132256870400") return message.channel.send("Sorry you don't have permission to use this!");
+        if(!message.member.hasPermission("BAN_MEMBERS") && message.author.id !== "291221132256870400") return message.channel.send("Nie możesz użyć tej komendy!");
 
         let member = message.mentions.members.first();
         if(!member) return message.channel.send(xdemb)
-        if(!member.bannable) return message.channel.send("I can't ban this user!")
-        if(member.user.id === "291221132256870400") return message.channel.send("I can't ban my owner!")
+        if(!member.bannable) return message.channel.send("Nie możesz zbanować tej osoby!")
+        if(member.user.id === "291221132256870400") return message.channel.send("Nie możesz zbanować mojego twórcy!")
 
-        if(member.id === message.author.id) return message.channel.send("You can't ban your self")
+        if(member.id === message.author.id) return message.channel.send("Nie możesz zbanować samego siebie!")
 
         let reason = args.slice(1).join(" ");
 
         if(!reason) {
-            res = "No reason given";
+                    res = "Nie ustawiono powodu!";
         } else {
             res = reason
         }
@@ -32,10 +32,10 @@ let xdemb = new Discord.RichEmbed()
 
         let bean = new Discord.RichEmbed()
         .setColor("#00ff00")
-        .setTitle(`Ban | ${member.user.tag}`)
-        .addField("User", member, true)
-        .addField("Moderator", message.author, true)
-        .addField("Reason", res)
+        .setTitle(`Rhino BOT - BAN | ${member.user.tag}`)
+        .addField("Użytkownik", member, true)
+        .addField("Administrator", message.author, true)
+        .addField("Powód", res)
         .setTimestamp()
 
         message.channel.send(bean)
