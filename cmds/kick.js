@@ -5,36 +5,36 @@ module.exports.run = async (bot, message, args) => {
     
   let xdemb = new Discord.RichEmbed()
   .setColor("#00ff00")
-  .setTitle("Kick Command")
-  .addField("Description:", `Kick a member`, true)
-  .addField("Usage:", "!kick [user] [reason]", true)
-  .addField("Example:" ,"!kick @Odar spam")
+  .setTitle("Richo BOT - KICK")
+  .addField("Funkcja:", `Wyrzuca użytkownika`, true)
+  .addField("Uzycie:", "!kick [nazwa] [powód]", true)
+  .addField("Przykład:" ,"!kick @Odar spam")
 
     let member = message.mentions.members.first();
     if(!member) return message.channel.send(xdemb)
       
     if(!member.kickable) 
-      return message.channel.send("I cannot kick this user!");
-   if(member.user.id === "291221132256870400") return message.channel.send("I can't kick my owner!")
+      return message.channel.send("Nie możesz wyrzucić tej osoby!");
+   if(member.user.id === "461215237002231808") return message.channel.send("Nie możesz wyrzucić mojego twórcy!")
 
     
     let reason = args.slice(1).join(' ');
     if(!reason) {
-      res = "No reason given";
+      res = "Nie użyto powodu";
     }
     else {
       res = `${reason}`
     }
     
     await member.kick(reason)
-      .catch(error => message.reply(`Sorry, I couldn't kick because of : ${error}`));
+      .catch(error => message.reply(`Nie można wyrzućić tej osoby! Powód : ${error}`));
 
       let kick = new Discord.RichEmbed()
       .setColor("#00ff00")
-      .setTitle(`Kick | ${member.user.tag}`)
-      .addField("User", member, true)
-      .addField("Moderator", message.author, true)
-      .addField("Reason", res)
+      .setTitle(`Wyrzuco | ${member.user.tag}`)
+      .addField("Uzytkownik", member, true)
+      .addField("Administrator", message.author, true)
+      .addField("Powód", res)
       .setTimestamp()
       .setFooter(member.id)
 
