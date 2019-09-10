@@ -1,20 +1,20 @@
-`!say` **Say something trough the bot!** __Użycie__: *r!say <message>*
-`!8ball` **Ask the bot something** __Użycie__: *r!8ball <question>*
-`!gif` **Searchs gif on giphy** __Użycie__: *r!gif <word>*
-`!weather` **Shows the weather in a place** __Użycie__: *r!weather <place> [country]*
-`!vote` **Make vote about something** __Użycie__: *r!vote <something>
-`!owner` **Makes someone Server Owner ** __Użycie__: *r!owner <@user>* 
-`!hastebin` **Upload code to hastebin** __Użycie__: *r!hastebin <code/text>* 
-`!unicode` **Gives you the symbol's unicode** __Użycie__: *r!unicode <symbol>*
-`!clap` **Makes a text with the :clap:** __Użycie__: rcalp <text>*
-`!flip` **Flip a text upsidedown** __Użycie__: *r!flip <text>*
-`!mock` **Mocks some text** __Użycie__: *r!mock <text>*
-`!urban` **Get the defintion of something** __Użycie__: *r!urban <word>*
-`!translate` **Translate somthing in other languange** __Użycie__: *r!translate <language> <word>*
+`!say` **Powiedz coś przez bota!** __Użycie__: *r!say <wiadomość>*
+`!8ball` **Zapytaj bota o coś** __Użycie__: *r!8ball <pytanie>*
+`!gif` **Przeszukuje gif na giphy** __Użycie__: *r!gif <słowo>*
+`!weather` **Pokazuje pogodę w miejscu** __Użycie__: *r!weather <miejsce> [kraj]*
+`!vote` **Stwórz głosowanie** __Użycie__: *r!vote <coś>
+`!owner` **Sprawia, że ktoś jest właścicielem serwera ** __Użycie__: *r!owner <@nazwa>* 
+`!hastebin` **Prześlij kod do hastebin** __Użycie__: *r!hastebin <kod/tekst>* 
+`!unicode` **Daje ci Unicode symbolu** __Użycie__: *r!unicode <symbol>*
+`!clap` **Tworzy tekst za pomocą: clap:** __Użycie__: rcalp <tekst>*
+`!flip` **Odwróć tekst do góry nogami* __Użycie__: *r!flip <tekst>*
+`!mock` **Wyśmiewa trochę tekstu  ** __Użycie__: *r!mock <tekst>*
+`!urban` **Uzyskaj definicję czegoś** __Użycie__: *r!urban <słowo>*
+`!translate` **Przetłumacz coś w innym języku** __Użycie__: *r!translate <język> <słowo>*
 `!cat` **Shows a random cat pic** __Użycie__: *r!cat*
-`!rate` **Rate someone** __Użycie__: *r!rate <@user>*
-`!pepe` **Shows pepe** __Użycie__: *r!pepe*
-`!shrug` **Shrugs** __Użycie__: *r!shrug*
-`!lenny` **Shows lenny face** __Użycie__: *r!lenny*
-`!megusta` **Shows megusta** __UUżycie__: *r!megusta* 
-`!kill` **Kill someone** __Użycie__: *r!kill [@user]*
+`!rate` **Oceń kogoś** __Użycie__: *r!rate <@nazwa>*
+`!pepe` **Pokazuje Pepe** __Użycie__: *r!pepe*
+`!shrug` **Wzrusza ramionami** __Użycie__: *r!shrug*
+`!lenny` **Pokazuje twarz Lenny'ego** __Użycie__: *r!lenny*
+`!megusta` **Pokazuje megusta** __UUżycie__: *r!megusta* 
+`!kill` **Zabij kogoś** __Użycie__: *r!kill [@nazwa]*
