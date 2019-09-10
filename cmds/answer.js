@@ -17,14 +17,14 @@ module.exports.run = async (bot, message, args) => {
    .setThumbnail(Owner.displayAvatarURL)
    .setTitle("Odpowiedź od twojego kontaktu!")
    .addField("Odpowiedź:", sayMessage)
-   .addField("Serwer", "[Odar Army](https://discord.gg/zvvasbc)")
+   .addField("Serwer", "[Rhino BOT - Support Center](https://discord.gg/XznfRUU)")
    .setTimestamp()
 
     bot.users.get(id).send(contact);
 
     let chanemb = new Discord.RichEmbed()
     .setColor("#00ff00")
-    .setDescription(`Message sent to <@${id}>`);
+    .setDescription(`Wysłano wiadomosć do <@${id}>`);
 
     message.channel.send(chanemb).then(msg => {msg.delete(5000)});
 
