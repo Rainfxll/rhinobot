@@ -16,11 +16,11 @@ fs.readdir("./cmds", (err, files) => {
 
     let jsfiles = files.filter(f => f.split(".").pop() === "js");
     if(jsfiles.length <= 0) {
-        console.log("No commands found to load!");
+        console.log("Nie znaleziono komend do załadowania!");
         return;
     }
 
-    console.log(`Loading ${jsfiles.length} commands!`);
+    console.log(`Ładowanie ${jsfiles.length} komend!`);
 
     jsfiles.forEach((f, i) => {
         let props = require(`./cmds/${f}`);
@@ -30,7 +30,7 @@ fs.readdir("./cmds", (err, files) => {
 });
 
 bot.on("ready", async () => {
-console.log(`Bots is ready and working in ${bot.guilds.size} servers with ${bot.users.size} users!`);
+console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${bot.users.size} użytkownikach!`);
     
     dbl.postStats(bot.guilds.size);
  
@@ -42,7 +42,7 @@ bot.user.setStatus('Online')
 
 bot.user.setActivity(`Ilość serwerów ${bot.guilds.size}| r!help`);
     
-    bot.channels.get("521378814467506176").setName(`Servers: ${bot.guilds.size}/100`)
+    bot.channels.get("621016826700234785").setName(`Serwery: ${bot.guilds.size}/100`)
     
 
 try {
