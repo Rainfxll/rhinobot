@@ -20,8 +20,8 @@ module.exports.run = async (bot, message, args) => {
    .setThumbnail(Sender.displayAvatarURL)
    .setDescription(`Kontakt z serwera [${message.guild.name}](${Invite.url})`)
    .setTitle("Rhino BOT - Support")
-   .addField("uZYTKOWNIK", Sender, true)
-   .addField("ID uŻYTKOWNIKA: ", Sender.id, true)
+   .addField("Użytkownik", Sender, true)
+   .addField("ID Użytkownika: ", Sender.id, true)
    .addField("Wiadomość: ", sayMessage)
    .setTimestamp()
 
