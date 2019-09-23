@@ -30,11 +30,6 @@ fs.readdir("./cmds", (err, files) => {
 bot.on("ready", async () => {
 console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${bot.users.size} użytkownikach!`);
     
-    dbl.postStats(bot.guilds.size);
- 
-setInterval(() => {
-        dbl.postStats(bot.guilds.size);
-    }, 5);
     
 bot.user.setStatus('Online')
 
