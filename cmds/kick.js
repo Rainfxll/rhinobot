@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 module.exports.run = async (bot, message, args) => {
 
-  if (!message.member.hasPermission("KICK_MEMBERS")  && message.author.id !== "291221132256870400") return message.channel.send("Sorry, you don't have permissions to use this!");
+  if (!message.member.hasPermission("KICK_MEMBERS")  && message.author.id !== "291221132256870400") return message.channel.send("Nie masz permisji!");
     
   let xdemb = new Discord.RichEmbed()
   .setColor("#00ff00")
@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
       
     if(!member.kickable) 
       return message.channel.send("Nie możesz wyrzucić tej osoby!");
-   if(member.user.id === "461215237002231808") return message.channel.send("Nie możesz wyrzucić mojego twórcy!")
+   if(member.user.id === "632975599119630356") return message.channel.send("Nie możesz wyrzucić mojego twórcy!")
 
     
     let reason = args.slice(1).join(' ');
