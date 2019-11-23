@@ -9,17 +9,10 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
 //    Add emoji name
-var emojiname = ["",""];
+var emojiname = [":white_check_mark: ",""];
 
 //    Add role name
-var rolename=["",""];
-
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}`);
-});
-
-
+var rolename=["test",""];
 
 client.on('message', msg => {
 
