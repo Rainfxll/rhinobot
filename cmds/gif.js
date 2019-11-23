@@ -1,9 +1,9 @@
 const Discord = require("discord.js")
-const giphy = require('giphy-api')("W8g6R14C0hpH6ZMon9HV9FTqKs4o4rCk");
+const giphy = require('giphy-api')("I6I1uHc8dDRlU5W0tGfPW1sWajHNyEu8");
 
 module.exports.run = (bot, message, args) => {
   if (args.length === 0) {
-    message.channel.send('No Seacrh terms!')
+    message.channel.send('Nie znaleziono memów')
     return;
   }
   if (args.length === 1) {
