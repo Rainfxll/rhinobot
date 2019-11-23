@@ -33,8 +33,7 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
     
 bot.user.setStatus('Online')
 
-bot.on("ready", () => {
-    bot.user.setActivity("my code", { type: "STREAMING", url: "https://www.twitch.tv/something" })
+bot.user.setActivity("my code", { type: "STREAMING", url: "https://www.twitch.tv/something" })
 })
     
 try {
