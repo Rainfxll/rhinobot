@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
                     let emb = new Discord.RichEmbed()
                     .setImage(body)
                     .setColor("#00ff00")
-                    .setTitle("Here is your random cat")
+                    .setTitle("Oto twój losowy kot")
                               
                    message.channel.send(emb)  
             }
