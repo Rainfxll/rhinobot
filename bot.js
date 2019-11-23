@@ -60,13 +60,13 @@ bot.on("message", async message => {
 });
 // Nadawanie rangi po wejściu użytkownika na serwer.
 
-client.on ("guildMemberAdd", member => {  
+bot.on ("guildMemberAdd", member => {  
 
     var role = member.guild.roles.find ("name", "✋ | UŻYTKOWNIK");
     member.addRole (role);
 })
 
-client.on ("guildMemberRemove", member => {
+bot.on ("guildMemberRemove", member => {
 
 })  
 
@@ -75,22 +75,22 @@ client.on ("guildMemberRemove", member => {
 
 // Nadawanie rangi po wejściu użytkownika na serwer.
 
-client.on ("guildMemberAdd", member => {  
+bot.on ("guildMemberAdd", member => {  
 
     var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
     member.addRole (role);
 })
 
-client.on ("guildMemberRemove", member => {
+bot.on ("guildMemberRemove", member => {
 
 })  
 
 // Wiadomość powitalna.
 
-client.on("guildMemberAdd", function(member){
+bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 });
 
-client.login(process.env.token);
+bot.login(process.env.token);
 
 //restart
