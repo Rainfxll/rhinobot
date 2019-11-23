@@ -34,7 +34,6 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
 bot.user.setStatus('Online')
 
 bot.user.setActivity("my code", { type: "STREAMING", url: "https://www.twitch.tv/something" })
-})
     
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
