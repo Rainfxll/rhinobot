@@ -6,7 +6,7 @@ const ft = new Fortnite(apikey.fortnite)
 module.exports.run = async (bot, message, args) => {
 
     let username = args.join(` `)
-    if(!username) return message.channel.send("Usage: `!fortnite <username>`")
+    if(!username) return message.channel.send("Usage: `!fortnite <nick>`")
     let platform = args[1];
 
     let data = ft.getInfo(username).then(data => {
