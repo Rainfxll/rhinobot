@@ -7,10 +7,10 @@ const client = new Discord.Client();
 const prefix = botSettings.prefix;
 
 //    Add emoji name
-var emojiname = ["":white_check_mark: ""];
+var emojiname = [":white_check_mark:"];
 
 //    Add role name
-var rolename=[""test""];
+var rolename=["test"];
 
 bot.on('message', msg => {
 
