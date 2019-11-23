@@ -24,7 +24,6 @@ if(msg.content.startsWith(prefix+"reaction")){
   for(let i in emoji){
    msg.react(emoji[i]);
   }
-});
 
 bot.on("messageReactionAdd",(reaction,user)=>{
   if(!user) return;
@@ -104,6 +103,7 @@ bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 })
 
+});
 bot.login(process.env.token);
 
 //restart
