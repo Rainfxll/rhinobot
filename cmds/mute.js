@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
 
   setTimeout(function(){
     tomute.removeRole(muterole.id);
-    message.channel.send(`<@${tomute.id}> został wyciszony!`);
+    message.channel.send(`<@${tomute.id}> został odciszony!`);
   }, ms(mutetime));
 
   message.delete();
