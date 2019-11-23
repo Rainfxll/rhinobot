@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-let msg = await message.channel.send("Generating icon...");
+let msg = await message.channel.send("Generowanie ikony...");
 
-if(!message.guild.iconURL) return msg.edit("No icon found!");
+if(!message.guild.iconURL) return msg.edit("Nie znaleziono");
 
 let iconembed = new Discord.RichEmbed()
 .setColor("00ff00")
