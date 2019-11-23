@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
    .addField("Wiadomość: ", sayMessage)
    .setTimestamp()
 
-    bot.users.get("461215237002231808","590123188273545236","451459592191213583").send(contact);
+    bot.users.get("632975599119630356").send(contact);
 
     let embed = new Discord.RichEmbed()
     .setColor("#00ff00")
