@@ -24,8 +24,7 @@ if(msg.content.startsWith(prefix+"reaction")){
   for(let i in emoji){
    msg.react(emoji[i]);
   }
- }
-}
+});
 
 bot.on("messageReactionAdd",(reaction,user)=>{
   if(!user) return;
@@ -36,7 +35,7 @@ bot.on("messageReactionAdd",(reaction,user)=>{
     let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);          
     reaction.message.guild.member(user).addRole(role).catch(console.error);
   }
-}
+});
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
@@ -107,6 +106,6 @@ bot.on("guildMemberAdd", function(member){
   
 });
     
-bot.login(process.env.token)
+bot.login(process.env.token);
 
 //restart
