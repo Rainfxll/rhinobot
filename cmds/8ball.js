@@ -13,8 +13,8 @@
 
     .setAuthor(message.author.username)
     .setColor("#00ff00")
-    .addField("Question", question)
-    .addField("Answer", replies[result]);
+    .addField("Pytanie", question)
+    .addField("Odpowiedz", replies[result]);
 
     message.channel.send(ballembed)
 
