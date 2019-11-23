@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
   
   if (args[0] === undefined) {
       
-    return message.channel.send('I need a character to get its unicode from!');
+    return message.channel.send('Potrzebuję postaci, aby uzyskać jej Unicode!');
 
   } else {
 
@@ -12,13 +12,13 @@ module.exports.run = async (bot, message, args) => {
 
     if (transArg === undefined) {
 
-      return message.channel.send('Type **1** character to get the unicode from!');
+      return message.channel.send('Wpisz ** 1 ** znak, aby uzyskać kod Unicode!');
 
     } else {
 
       if (transArg.length >= 2) {
 
-        return message.channel.send(`Too long ${message.author}; you can only enter **1** character.`);
+        return message.channel.send(`Za długi $ {message.author}; możesz wpisać tylko ** 1 ** znak.`);
 
       }
 
