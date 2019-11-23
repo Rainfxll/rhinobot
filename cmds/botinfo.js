@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#00ff00")
     .setThumbnail(bicon)
     .addField("Nazwa Bota", `<:robot:425631858265423883> ${bot.user.username}`, inline)
-    .addField("Twórca Bota", "<:bust_in_silhouette:424890572919013397> @KukisS#3597", inline )
+    .addField("Twórca Bota", "<:bust_in_silhouette:424890572919013397> KukisS", inline )
     .addField("Serwery", `🛡 ${servsize}`, inline)
     .addField("Kanały", `📁 ${chansize}`, inline)
     .addField("Użytkownicy", `<:busts_in_silhouette:424958082691629057> ${usersize}`, inline)
