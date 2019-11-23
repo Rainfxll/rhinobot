@@ -6,10 +6,10 @@ module.exports.run = async (bot, message, args) => {
 
         let role = message.guild.roles.find(r => r.name === "» | Kara: Mute")
         
-        if(!role || !toMute.roles.has(role.id)) return message.channel.sendMessage("This user is not muted!");
+        if(!role || !toMute.roles.has(role.id)) return message.channel.sendMessage("Ten użytkownik nie jest wyciszony!");
 
         await toMute.removeRole(role);
-        message.channel.sendMessage("Użytkownik nie został wyciszony!");
+        message.channel.sendMessage("Użytkownik został odciszony!");
 
         message.delete();
 
