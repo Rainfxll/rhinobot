@@ -1,9 +1,9 @@
-`!ping` **Sprawdź bota ping** __Użycie__: *r!ping*
-`!id` **Daje ci id użytkownika** __Użycie__: *r!id [@nazwa]
-`!invite` **Daje zaproszenie do bota** __Użycie__: *r!invite*
-`!avatar` **Daje ci czyjś awatar** __Użycie__: *r!avatar [@nazwa]*
-`!icon` **Daje ci ikonę serwera** __Użycie__: *r!icon*
-`!botinfo` **Podaje informacje o bocie** __Użycie__: *r!botinfo*
-`!userinfo` **Podaje informacje o użytkowniku** __Użycie__: *r!userinfo [@nazwa]*
-`!serverinfo` **Podaje informacje o serwerze** __Użycie__: *r!serverinfo*
-`!finduser`  **Znajduje użytkowników o tej nazwie** __Użycie__: *r!finduser <nazwa>*
+`r!ping` **Sprawdź bota ping** __Użycie__: *r!ping*
+`r!id` **Daje ci id użytkownika** __Użycie__: *r!id [@nazwa]
+`r!invite` **Daje zaproszenie do bota** __Użycie__: *r!invite*
+`r!avatar` **Daje ci czyjś awatar** __Użycie__: *r!avatar [@nazwa]*
+`r!icon` **Daje ci ikonę serwera** __Użycie__: *r!icon*
+`r!botinfo` **Podaje informacje o bocie** __Użycie__: *r!botinfo*
+`r!userinfo` **Podaje informacje o użytkowniku** __Użycie__: *r!userinfo [@nazwa]*
+`r!serverinfo` **Podaje informacje o serwerze** __Użycie__: *r!serverinfo*
+`r!finduser`  **Znajduje użytkowników o tej nazwie** __Użycie__: *r!finduser <nazwa>*
