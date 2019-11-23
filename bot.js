@@ -91,6 +91,6 @@ bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 });
 
-bot.login(process.env.token);
+bot.login(token);
 
 //restart
