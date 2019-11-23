@@ -5,7 +5,6 @@ const ytdl = require("ytdl-core");
 const request = require("request");
 const client = new Discord.Client();
 const prefix = botSettings.prefix;
-const config = require("./botsettings.json");
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
@@ -91,6 +90,6 @@ bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 });
 
-client.login(token);
+bot.login(token);
 
 //restart
