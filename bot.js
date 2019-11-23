@@ -68,9 +68,7 @@ bot.on ("guildMemberAdd", member => {
     member.addRole (role);
 })
 
-bot.on ("guildMemberRemove", member => {
-
-})  
+bot.on ("guildMemberRemove", member => {  
 
 // Wiadomość powitalna.
 
