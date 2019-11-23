@@ -57,15 +57,6 @@ bot.on("message", async message => {
     if(cmd) cmd.run(bot, message, args);
 
 });
-// Nadawanie rangi po wejściu użytkownika na serwer.
-
-bot.on ("guildMemberAdd", member => {  
-
-    var role = member.guild.roles.find ("name", "✋ | UŻYTKOWNIK");
-    member.addRole (role);
-})
-
-bot.on ("guildMemberRemove", member => {
 
 })  
 
