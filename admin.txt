@@ -1,7 +1,7 @@
-`!addrole` **Daje komuś rolę** __Użycie__: *r!addrole <@nazwa> <rola>*
-`!removerole` **Usuwa czyjąś rolę** __Użycie__: *r!removerole <@nazwa> <rola>*
-`!mute` **Wycisza użytkownika** __Użycie__: *r!mute <@nazwa> <czas>*
-`!unmute` **Anuluje wyciszenie użytkownika** __Użycie__: *r!unmute <@nazwa>*
-`!kick` **Wyrzuca użytkownika z serwera** __Użycie__: *r!kick <@nazwa> <powód>*
-`!ban` **Zbanuje użytkownika z serwera** __Użycie__: *r!ban <@nazwa> <powód>*
-`!clear` **Czyści czat** __Użycie__: *r!clear <ilośc>*
+`r!addrole` **Daje komuś rolę** __Użycie__: *r!addrole <@nazwa> <rola>*
+`r!removerole` **Usuwa czyjąś rolę** __Użycie__: *r!removerole <@nazwa> <rola>*
+`r!mute` **Wycisza użytkownika** __Użycie__: *r!mute <@nazwa> <czas>*
+`r!unmute` **Anuluje wyciszenie użytkownika** __Użycie__: *r!unmute <@nazwa>*
+`r!kick` **Wyrzuca użytkownika z serwera** __Użycie__: *r!kick <@nazwa> <powód>*
+`r!ban` **Zbanuje użytkownika z serwera** __Użycie__: *r!ban <@nazwa> <powód>*
+`r!clear` **Czyści czat** __Użycie__: *r!clear <ilośc>*
