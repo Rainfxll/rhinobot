@@ -4,10 +4,10 @@ module.exports.run = async (bot, message, args) => {
   let bicon = bot.user.displayAvatarURL;
     
  let inviteEmbed = new Discord.RichEmbed()
- .setDescription("[**Invite**](http://bit.ly/OdarBot)")
+ .setDescription("[**Zaproszenie**](https://discordapp.com/oauth2/authorize?client_id=620235638511239168&permissions=8&scope=bot)")
  .setColor("#00ff00")
  .setThumbnail(bicon)
- .addField("Use this invite to invite the bot in your server!", "http://bit.ly/OdarBot")
+ .addField("Użyj tego linku aby zaprosić bota na serwer", "https://discordapp.com/oauth2/authorize?client_id=620235638511239168&permissions=8&scope=bot")
 
  message.channel.send(inviteEmbed);
 
