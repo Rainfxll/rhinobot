@@ -69,9 +69,6 @@ bot.on ("guildMemberRemove", member => {
 
 })  
 
-
-});
-
 // Nadawanie rangi po wejściu użytkownika na serwer.
 
 bot.on ("guildMemberAdd", member => {  
