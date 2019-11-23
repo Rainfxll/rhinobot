@@ -16,7 +16,7 @@ let xdemb = new Discord.RichEmbed()
         let member = message.mentions.members.first();
         if(!member) return message.channel.send(xdemb)
         if(!member.bannable) return message.channel.send("Nie możesz zbanować tej osoby!")
-        if(member.user.id === "291221132256870400") return message.channel.send("Nie możesz zbanować mojego twórcy!")
+        if(member.user.id === "632975599119630356") return message.channel.send("Nie możesz zbanować mojego twórcy!")
 
         if(member.id === message.author.id) return message.channel.send("Nie możesz zbanować samego siebie!")
 
