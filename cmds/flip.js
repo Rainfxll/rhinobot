@@ -4,7 +4,7 @@ const mapping = '¡"#$%⅋,)(*+\'-˙/0ƖᄅƐㄣϛ9ㄥ86:;<=>?@∀qƆpƎℲפHI�
 const OFFSET = '!'.charCodeAt(0);
 
 exports.run = (bot, message, args) => {
-    if (args.length < 1) return message.channel.send("You must provide text to flip!");
+    if (args.length < 1) return message.channel.send("Musisz podać tekst do odwrócenia!");
 
     message.channel.send(
         args.join(' ').split('')
