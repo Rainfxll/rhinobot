@@ -5,6 +5,8 @@ const ytdl = require("ytdl-core");
 const request = require("request");
 const client = new Discord.Client();
 const prefix = botSettings.prefix;
+const bot = new Discord.Client({disableEveryone: true});
+bot.commands = new Discord.Collection();
 
 //    Add emoji name
 var emojiname = [":white_check_mark:"];
@@ -34,10 +36,6 @@ bot.on("messageReactionAdd",(reaction,user)=>{
     let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);          
     reaction.message.guild.member(user).addRole(role).catch(console.error);
   }
-
-
-const bot = new Discord.Client({disableEveryone: true});
-bot.commands = new Discord.Collection();
 
 fs.readdir("./cmds", (err, files) => {
     if(err) console.error(err);
