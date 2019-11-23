@@ -9,7 +9,7 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
 //    Add emoji name
-var emojiname = ["white_check_mark",""];
+var emojiname = [":white_check_mark:",""];
 
 //    Add role name
 var rolename=["test",""];
