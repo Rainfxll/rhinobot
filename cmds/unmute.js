@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("Nie masz premii `Zarządzaj wiadomościami '")
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("Nie masz premisji `Zarządzaj wiadomościami '")
 
         let toMute = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
         if(!toMute) return message.channel.sendMessage("Podaj użytkownika lub identyfikator, aby wyciszyć!");
