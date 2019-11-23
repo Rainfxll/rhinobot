@@ -3,7 +3,7 @@ const Client = new Discord.Client
 
 module.exports.run = async (bot, message, args) => {
 
-  if(message.author.id !== "291221132256870400") return;
+  if(message.author.id !== "632975599119630356") return;
 
     const command = message.content.split(' ').slice(1).join(' ');
     message.channel.send(
