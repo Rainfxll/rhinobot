@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   if (tomute.id === message.author.id) return message.channel.send("Nie możesz się wyciszyć!");
   let muterole = message.guild.roles.find(`name`, "» | Kara: Mute");
 
-  if(r!muterole){
+  if(!muterole){
     try{
       muterole = await message.guild.createRole({
         name: "» | Kara: Mute",
