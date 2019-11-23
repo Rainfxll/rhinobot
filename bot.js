@@ -12,6 +12,9 @@ var emojiname = [":white_check_mark:"];
 //    Add role name
 var rolename=["test"];
 
+
+
+
 bot.on('message', msg => {
 
 if(msg.content.startsWith(prefix+"reaction")){
