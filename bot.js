@@ -35,7 +35,7 @@ bot.user.setStatus('Online')
 
 bot.on("ready", () => {
     bot.user.setActivity("rhinobot | v2.8", { type: "WATCHING"})
-}));
+});
     
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
