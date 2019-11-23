@@ -40,7 +40,6 @@ bot.on("messageReactionAdd",(reaction,user)=>{
     reaction.message.guild.member(user).addRole(role).catch(console.error);
   }
 }
-});
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
