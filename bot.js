@@ -33,7 +33,9 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
     
 bot.user.setStatus('Online')
 
-bot.user.setActivity(`rhinobot| v1.1`, {type: "stream"});
+bot.on("ready", () => {
+    bot.user.setActivity("rhinobot | v2.8", { type: "WATCHING"})
+}));
     
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
