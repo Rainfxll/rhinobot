@@ -12,7 +12,7 @@ bot.on('messageReactionAdd', (messageReaction, user) => {
 if(user.bot)  return;
 const { message, emoji } = messageReaction;
 
-if(emoji.name === ":white_check_mark:") {
+if(emoji.name === "white_check_mark") {
 if(message.id === "647922766166753290") {
 // code to run when that emoji is reacted on specified message
   }
