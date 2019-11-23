@@ -8,15 +8,10 @@ const prefix = botSettings.prefix;
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-bot.on('messageReactionAdd', (messageReaction, user) => {
-if(user.bot)  return;
-const { message, emoji } = messageReaction;
-
-if(emoji.name === "➡") {
-if(message.id === "647922766166753290") {
-// code to run when that emoji is reacted on specified message
-  }
- } 
+bot.on('message', (message) => {
+if(message.content.startsWith('!weryfikacja')) {
+message.member.addRole(role = "647911726662287370").catch(console.error);
+}
 });
 
 fs.readdir("./cmds", (err, files) => {
