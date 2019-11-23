@@ -8,37 +8,46 @@ const prefix = botSettings.prefix;
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-//    Add emoji name
-var emojiname = [":white_check_mark:",""];
-
-//    Add role name
-var rolename=["test",""];
-
-bot.on('message', msg => {
-
-if(msg.content.startsWith(prefix+"reaction")){
-  if(!msg.channel.guild) return;
-  for(let n in emojiname){
-  var emoji =[msg.guild.emojis.find(r => r.name == emojiname[n])];
-  for(let i in emoji){
-   msg.react(emoji[i]);
-  }
- }
-}
-});
-
-
-
-bot.on("messageReactionAdd",(reaction,user)=>{
-  if(!user) return;
-  if(user.bot)return;
-  if(!reaction.message.channel.guild) return;
-  for(let n in emojiname){
-  if(reaction.emoji.name == emojiname[n]){
-    let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);          
-    reaction.message.guild.member(user).addRole(role).catch(console.error);
-  }
-}
+client.on('messageReactionAdd', async (reaction, user) => {
+    
+    let applyRole = async () => {
+        let emojiName = reaction.emoji.name;
+        let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+        let member = reaction.message.guild.members.find(member => member.id === user.id);
+        try {
+            if(role && member) {
+                console.log("Role and member found.");
+                await member.roles.add(role);
+                console.log("Done.");
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    if(reaction.message.partial)
+    {
+        try {
+            let msg = await reaction.message.fetch(); 
+            console.log(msg.id);
+            if(msg.id === '647922766166753290')
+            {
+                console.log("Cached")
+                applyRole();
+            }
+        }
+        catch(err) {
+            console.log(err);
+        }
+    }
+    else 
+    {
+        console.log("Not a partial.");
+        if(reaction.message.id === '647922766166753290') {
+            console.log(true);
+            applyRole();
+        }
+    }
 });
 
 fs.readdir("./cmds", (err, files) => {
