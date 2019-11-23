@@ -14,7 +14,7 @@ var emojiname = ["white_check_mark",""];
 //    Add role name
 var rolename=["test",""];
 
-client.on('message', msg => {
+bot.on('message', msg => {
 
 if(msg.content.startsWith(prefix+"reaction")){
   if(!msg.channel.guild) return;
@@ -29,7 +29,7 @@ if(msg.content.startsWith(prefix+"reaction")){
 
 
 
-client.on("messageReactionAdd",(reaction,user)=>{
+bot.on("messageReactionAdd",(reaction,user)=>{
   if(!user) return;
   if(user.bot)return;
   if(!reaction.message.channel.guild) return;
