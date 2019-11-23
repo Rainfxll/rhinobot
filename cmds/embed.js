@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
 
-  if(message.author.id !== "291221132256870400") return;
+  if(message.author.id !== "632975599119630356") return;
 
   const cmd = args.join(' ').split(' | ')
 
