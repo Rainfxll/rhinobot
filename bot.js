@@ -26,9 +26,6 @@ if(msg.content.startsWith(prefix+"reaction")){
   }
  }
 }
-});
-
-
 
 bot.on("messageReactionAdd",(reaction,user)=>{
   if(!user) return;
