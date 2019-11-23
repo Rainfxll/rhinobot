@@ -1,7 +1,7 @@
 exports.run = async (client, msg, args) => {
     let res;
     try {
-      await msg.channel.send("Searching for code to beautify...");
+      await msg.channel.send("Wyszukiwanie kodu do upiększenia ...");
       res = await format(msg);
     } catch(e) {
       res = e;
@@ -44,7 +44,7 @@ exports.run = async (client, msg, args) => {
         break;
       }
     }
-    if (!code) throw new Error("No Javascript codeblock found.");
+    if (!code) throw new Error("Nie znaleziono kodu JavaScript.");
   
     const beautifiedCode = js_beautify(code, { indent_size: 2, brace_style: "collapse", jslint_happy: true });
     const str = await reduceIndentation(beautifiedCode);
