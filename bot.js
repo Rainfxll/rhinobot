@@ -25,9 +25,9 @@ let statuses = [
 
 setInterval(function() {
     let status = statuses[Math.floor(Math.random() * statuses.length)];
-    bot.user.setActivity(status, {type: "STREAMING"});
+    bot.user.setActivity(status, {type: "STREAM"});
 
- }, 500)
+ }, 5000)
 
 bot.on ("message", (message) => {
 
