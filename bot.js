@@ -10,7 +10,6 @@ bot.commands = new Discord.Collection();
 
 bot.on ("message", (message) => {
 
-
     msg = message.content.toLowerCase();
 
     if (message.author.bot) return;
@@ -24,7 +23,7 @@ bot.on ("message", (message) => {
         mention.sendMessage (mentionMessage);
         message.channel.send ("Wysłano!")
     }
-})
+});
 
 
 bot.on('message', (message) => {
@@ -100,6 +99,7 @@ bot.on("guildMemberAdd", function(member){
 })
     
 });
+    
 bot.login(process.env.token);
 
 //restart
