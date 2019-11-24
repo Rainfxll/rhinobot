@@ -12,8 +12,6 @@ bot.commands = new Discord.Collection();
 bot.on("ready", async () => {
 console.log(`Jest gotowy do pracy przy ${bot.guilds.size} serwerach i ${bot.users.size} użytkownikach!`);
 
-bot.user.setStatus('Online')
- 
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
     console.log(link);
