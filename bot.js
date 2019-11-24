@@ -21,7 +21,7 @@ setInterval(function() {
   console.log('Getting stats update..')
 
   //Get actual counts
-  var onlineCount = guild.members.filter(m => m.presence.status === 'online').size
+  var onlineCount = guild.member.filter(m => m.presence.status === 'online').size
   var coderCount = guild.roles.get('647943681185153044').members.size;
   
   // Log counts for debugging
