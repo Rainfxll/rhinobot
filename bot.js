@@ -13,7 +13,8 @@ bot.commands = new Discord.Collection();
 setInterval(function() {
   console.log('Getting stats update..')
   
-  bot.channels.get("648103250549014572").setName(`Servers: ${bot.guilds.size}/100`)
+  bot.channels.get("648103250549014572").setName(`» | Serwery: ${bot.guilds.size}/1`)
+  bot.channels.get("648103267699785750").setName(`» | Serwery: ${bot.guilds.member.size}/1`)
   }, 30000)
 
 bot.on ("message", (message) => {
