@@ -14,7 +14,7 @@ setInterval(function() {
   console.log('Getting stats update..')
   
   bot.channels.get("648103250549014572").setName(`» | Serwery: ${bot.guilds.size}/1`)
-  bot.channels.get("648103267699785750").setName(`» | Użytkownicy: ${bot.guilds.memberCount}`)
+  bot.channels.get("648103267699785750").setName(`» | Użytkownicy: ${bot.users.size}`)
   }, 30000)
 
 bot.on ("message", (message) => {
