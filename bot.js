@@ -28,22 +28,19 @@ setInterval(function() {
   bot.channels.get("648103267699785750").setName(`» | Użytkownicy: ${bot.users.size}`)
   }, 30000)
 
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;  
 
-bot.on ("message", (message) => {
+    let messageArray = message.content.split(" ");
+    let command = messageArray[0];
+    let args = messageArray.slice(1);
 
-    msg = message.content.toLowerCase();
+    if(!command.startsWith(prefix)) return;
 
-    if (message.author.bot) return;
+    let cmd = bot.commands.get(command.slice(prefix.length));
+    if(cmd) cmd.run(bot, message, args);
     
-    mention = message.mentions.users.first();
-
-    if (msg.startsWith (prefix + "dm")) {
-        if (mention == null) { return; }
-        message.delete();
-        mentionMessage = message.content.slice (4);
-        mention.sendMessage (mentionMessage);
-        message.channel.send ("Wysłano!")
-    }
 });
 
 bot.on('message', (message) => {
