@@ -28,7 +28,7 @@ setInterval(function() {
     bot.user.setActivity(status, {type: "WATCHING"});
 
  }, 500)
-}
+
 bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
