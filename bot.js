@@ -25,9 +25,10 @@ let statuses = [
 
 setInterval(function() {
     let status = statuses[Math.floor(Math.random() * statuses.length)];
-    bot.user.setActivity(status, {type: "STREAM"});
+    bot.user.setActivity(status, {type: "WATCHING"});
 
-}, 500)
+ }, 500)
+}
 bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
