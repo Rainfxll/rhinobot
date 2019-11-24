@@ -9,31 +9,42 @@ const prefix = botSettings.prefix
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-const serverStats = {
-    guildID: '647529848495013918', //Guild ID
-    totalUserID: '648103250549014572', //Total Users : 0
-    memberCountID: '648103267699785750', //Member Count : 0
-    botCountID: '648103666355666956' //Bot Count: 0
-};
+// Get our server
+const guild = bot.guilds.get('647529848495013918');
 
-//2 Listeners.. Add and Remove..
+// Get our stats channels
+const totalUsers = bot.channels.get('648103250549014572');
+const onlineUsers = bot.channels.get('648103267699785750');
+const codeMonkeys = bot.channels.get('648103666355666956');
 
-bot.on('guildMemberAdd', member =>{
+// Check every 30 seconds for changes
+setInterval(function() {
+  console.log('Getting stats update..')
 
-    if(member.guild.id !== serverStats.guildID) return;
+  //Get actual counts
+  var userCount = guild.memberCount;
+  var onlineCount = guild.members.filter(m => m.presence.status === 'online').size
+  var coderCount = guild.roles.get('647943681185153044').members.size;
+  
+  // Log counts for debugging
+  console.log("Total Users: " + userCount);
+  console.log("Online Users: " + onlineCount);
+  console.log("Coders: " + coderCount);
 
-    bot.channels.get(serverStats.totalUserID).setName(`» | Wszyscy : ${member.guild.memberCount}`); //Total
-    bot.channels.get(serverStats.memberCountID).setName(`» | Użytkownicy : ${member.guild.members.filter(m => !m.user.bot).size}`); //Member
-    bot.channels.get(serverStats.botCountID).setName(`» | Boty : ${member.guild.members.filter(m => m.user.bot).size}`) //Bot
-});
+  // Set channel names
+  totalUsers.setName("Total Users: " + userCount)
+  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+  .catch(console.error);
 
-bot.on('guildMemberRemove', member =>{
+  onlineUsers.setName("Online Users: " + onlineCount)
+  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+  .catch(console.error);
 
-    if(member.guild.id !== serverStats.guildID) return;
+  codeMonkeys.setName("Coders: " + coderCount)
+  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+  .catch(console.error);
+  }, 30000)
 
-    bot.channels.get(serverStats.totalUserID).setName(`» | Wszyscy : ${member.guild.memberCount}`);
-    bot.channels.get(serverStats.memberCountID).setName(`» | Użytkownicy : ${member.guild.members.filter(m => !m.user.bot).size}`);
-    bot.channels.get(serverStats.botCountID).setName(`» | Boty : ${member.guild.members.filter(m => m.user.bot).size}`)
 });
 
 bot.on ("message", (message) => {
