@@ -8,6 +8,26 @@ const prefix = botSettings.prefix;
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+const prefix = "r!";
+bot.on ("message", (message) => {
+
+
+    msg = message.content.toLowerCase();
+
+    if (message.author.bot) return;
+    
+    mention = message.mentions.users.first();
+
+    if (msg.startsWith (prefix + "dm")) {
+        if (mention == null) { return; }
+        message.delete();
+        mentionMessage = message.content.slice (4);
+        mention.sendMessage (mentionMessage);
+        message.channel.send ("Wysłano!")
+    }
+})
+
+
 bot.on('message', (message) => {
 if(message.content.startsWith('!weryfikacja')) {
 message.member.addRole(role = "647911726662287370").catch(console.error);
