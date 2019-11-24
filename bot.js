@@ -17,6 +17,13 @@ setInterval(function() {
   bot.channels.get("648103267699785750").setName(`» | Użytkownicy: ${bot.users.size}`)
   }, 30000)
 
+setInterval(function() {
+  console.log('Getting stats update..')
+  
+  bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
+  bot.user.setActivity("r!help | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
+  }, 30000)
+
 bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
@@ -74,7 +81,6 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
         
 bot.user.setStatus('Online')
 
-bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
 
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
