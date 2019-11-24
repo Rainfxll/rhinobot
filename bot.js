@@ -5,6 +5,7 @@ const ytdl = require("ytdl-core");
 const request = require("request");
 const client = new Discord.Client();
 const prefix = botSettings.prefix
+
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
@@ -46,11 +47,11 @@ fs.readdir("./cmds", (err, files) => {
 
     let jsfiles = files.filter(f => f.split(".").pop() === "js");
     if(jsfiles.length <= 0) {
-        console.log("Nie znaleziono komend do załadowania!");
+        console.log("No commands found to load!");
         return;
     }
 
-    console.log(`Ładowanie ${jsfiles.length} komend!`);
+    console.log(`Loading ${jsfiles.length} commands!`);
 
     jsfiles.forEach((f, i) => {
         let props = require(`./cmds/${f}`);
@@ -66,6 +67,14 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
 bot.user.setStatus('Online')
 
 bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
+
+try {
+    let link = await bot.generateInvite(["ADMINISTRATOR"]);
+    console.log(link);
+    } catch(e) {
+        console.log(e.stack);
+        }
+});
        
 bot.on("message", async message => {
     if(message.author.bot) return;
@@ -79,8 +88,8 @@ bot.on("message", async message => {
 
     let cmd = bot.commands.get(command.slice(prefix.length));
     if(cmd) cmd.run(bot, message, args);
-
-}); 
+    
+});
 
 // Nadawanie rangi po wejściu użytkownika na serwer.
 
