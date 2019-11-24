@@ -89,7 +89,7 @@ bot.on('guildMemberRemove', member =>{
     bot.channels.get(serverStats.totalUserID).setName(`» | Wszyscy : ${member.guild.memberCount}`);
     bot.channels.get(serverStats.memberCountID).setName(`» | Użytkownicy : ${member.guild.members.filter(m => !m.user.bot).size}`);
     bot.channels.get(serverStats.botCountID).setName(`» | Boty : ${member.guild.members.filter(m => m.user.bot).size}`)
-}
+});
 
     
 bot.on("message", async message => {
@@ -123,8 +123,6 @@ bot.on ("guildMemberRemove", member => {
 bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 })
-
-});
 
 bot.login(process.env.token);
 
