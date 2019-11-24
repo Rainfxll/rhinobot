@@ -6,9 +6,9 @@ const request = require("request");
 const client = new Discord.Client();
 const prefix = botSettings.prefix;
 const bot = new Discord.Client({disableEveryone: true});
+const prefix = "r!";
 bot.commands = new Discord.Collection();
 
-const prefix = "r!";
 bot.on ("message", (message) => {
 
 
