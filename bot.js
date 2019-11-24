@@ -80,7 +80,7 @@ fs.readdir("./cmds", (err, files) => {
 });
 
 try {
-    let link = await bot.generateInvite(["ADMINISTRATOR"]);
+    let link = bot.generateInvite(["ADMINISTRATOR"]);
     console.log(link);
     } catch(e) {
         console.log(e.stack);
