@@ -84,11 +84,11 @@ bot.on ("guildMemberAdd", member => {
 
     var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
     member.addRole (role);
-})
+});
 
 bot.on ("guildMemberRemove", member => {
 
-})  
+});  
 
 bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
