@@ -57,10 +57,10 @@ fs.readdir("./cmds", (err, files) => {
         bot.commands.set(props.help.name, props);   
                     
 bot.on("ready", async () => {
-console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${bot.users.size} użytkownikach!`);
-    
+    console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${bot.users.size} użytkownikach!`);  
+});
+        
 bot.user.setStatus('Online')
-
 bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
        
 bot.on("message", async message => {
