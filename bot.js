@@ -17,13 +17,17 @@ setInterval(function() {
   bot.channels.get("648103267699785750").setName(`» | Użytkownicy: ${bot.users.size}`)
   }, 30000)
 
-setInterval(function() {
-  console.log('Getting stats update..')
-  
-  bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
-  bot.user.setActivity("r!help | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
-  }, 30000)
+let statuses = [
+    `test1`,
+    `test2`
+    `test3`
+]
 
+setInterval(function() {
+    let status = statuses[Math.flor(Math.random() * statuses.length)];
+    bot.user.setActivity(status, {type: "STREAMING"});
+
+}, 5000)
 bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
