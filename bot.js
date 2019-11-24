@@ -1,6 +1,6 @@
 const botSettings = require("./botsettings.json")
-const Discord = require("discord.js");
 const fs = require("fs");
+const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 const request = require("request");
 const client = new Discord.Client();
