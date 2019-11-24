@@ -79,13 +79,6 @@ fs.readdir("./cmds", (err, files) => {
     });
 });
 
-try {
-    let link = bot.generateInvite(["ADMINISTRATOR"]);
-    console.log(link);
-    } catch(e) {
-        console.log(e.stack);
-        }
-
 client.on ("guildMemberAdd", member => {  
 
     var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
