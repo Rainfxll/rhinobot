@@ -48,14 +48,16 @@ fs.readdir("./cmds", (err, files) => {
     if(jsfiles.length <= 0) {
         console.log("Nie znaleziono komend do załadowania!");
         return;
-    };
+    }
 
     console.log(`Ładowanie ${jsfiles.length} komend!`);
 
     jsfiles.forEach((f, i) => {
         let props = require(`./cmds/${f}`);
         console.log(`${i + 1}: ${f} loaded!`);
-        bot.commands.set(props.help.name, props);   
+        bot.commands.set(props.help.name, props);
+    });
+});
                     
 bot.on("ready", async () => {
     console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${bot.users.size} użytkownikach!`);  
