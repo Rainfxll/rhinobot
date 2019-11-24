@@ -1,4 +1,4 @@
-const botSettings = require("./botsettings.json")
+kkkkconst botSettings = require("./botsettings.json")
 const Discord = require("discord.js");
 const fs = require("fs");
 const ytdl = require("ytdl-core");
@@ -93,12 +93,12 @@ client.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 });
 
-client.on('test', message => {
+client.on('message', message => {
   // Voice only works in guilds, if the message does not come from a guild,
   // we ignore it
   if (!message.guild) return;
 
-  if (message.content === '/join') {
+  if (message.content === '!join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
