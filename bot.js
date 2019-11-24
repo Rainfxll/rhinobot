@@ -68,7 +68,9 @@ bot.user.setStatus('Online')
 
 bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
 bot.channels.get("648090668933316608").setName(`» | Serwery: ${bot.guilds.size}/2`)
-}, 500);
+}, 500)
+    
+});
     
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
