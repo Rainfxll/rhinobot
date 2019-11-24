@@ -1,4 +1,4 @@
-xxconst botSettings = require("./botsettings.json")
+const botSettings = require("./botsettings.json")
 const fs = require("fs");
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
