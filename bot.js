@@ -112,6 +112,6 @@ bot.on('message', message => {
   }
 });
 
-bot.user.setActivity('rhinobot | 2.8', { type: 'STREAM' });
+bot.user.setActivity('rhinobot | 2.8', { type: 'STREAMING' });
 
 bot.login(process.env.token);
