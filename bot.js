@@ -24,7 +24,7 @@ let statuses = [
 ]
 
 setInterval(function() {
-    let status = statuses[Math.flor(Math.random() * statuses.length)];
+    let status = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(status, {type: "STREAMING"});
 
 }, 5000)
