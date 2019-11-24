@@ -81,7 +81,6 @@ bot.on('guildMemberAdd', member =>{
     bot.channels.get(serverStats.totalUserID).setName(`» | Wszyscy : ${member.guild.memberCount}`); //Total
     bot.channels.get(serverStats.memberCountID).setName(`» | Użytkownicy : ${member.guild.members.filter(m => !m.user.bot).size}`); //Member
     bot.channels.get(serverStats.botCountID).setName(`» | Boty : ${member.guild.members.filter(m => m.user.bot).size}`) //Bot
-});
 
 bot.on('guildMemberRemove', member =>{
 
