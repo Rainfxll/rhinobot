@@ -45,8 +45,6 @@ setInterval(function() {
   .catch(console.error);
   }, 30000)
 
-});
-
 bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
