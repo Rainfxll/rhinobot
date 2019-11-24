@@ -20,12 +20,12 @@ setInterval(function() {
 let statuses = [
     "r!help | 2.8",
     "rhinobot | 2.8",
-    `użytkownicy ${bot.users.size} | 2.8`
+    `serwery: ${bot.guilds.size}/1 | 2.8`
 ]
 
 setInterval(function() {
     let status = statuses[Math.floor(Math.random() * statuses.length)];
-    bot.user.setActivity(status, {type: "STREAMING"});
+    bot.user.setActivity(status, {type: "WATCHING"});
 
  }, 5000)
 
