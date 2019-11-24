@@ -68,6 +68,10 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
 bot.user.setStatus('Online')
 
 bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
+bot.channels.get("648090668933316608").setName(`Serwery: ${bot.guilds.size}/2`)    
+setInterval(() => {
+        dbl.postStats(bot.guilds.size);
+    }, 500); 
     
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
