@@ -11,6 +11,10 @@ bot.commands = new Discord.Collection();
 
 bot.on("ready", async () => {
 console.log(`Jest gotowy do pracy przy ${bot.guilds.size} serwerach i ${bot.users.size} użytkownikach!`);
+    
+bot.user.setStatus('Online')
+
+bot.user.setActivity('rhinobot | 2.8', { type: 'STREAMING' });
 
 try {
     let link = await bot.generateInvite(["ADMINISTRATOR"]);
@@ -111,7 +115,5 @@ bot.on('message', message => {
     }
   }
 });
-
-bot.user.setActivity('rhinobot | 2.8', { type: 'STREAMING' });
 
 bot.login(process.env.token);
