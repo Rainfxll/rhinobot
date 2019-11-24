@@ -1,4 +1,4 @@
-const botSettings = require("./botsettings.json")
+xxconst botSettings = require("./botsettings.json")
 const fs = require("fs");
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
@@ -18,9 +18,9 @@ setInterval(function() {
   }, 30000)
 
 let statuses = [
-    "test1",
-    "test2",
-    "test3"
+    "r!help | 2.8",
+    "rhinobot | 2.8",
+    `użytkownicy ${bot.users.size} | 2.8`
 ]
 
 setInterval(function() {
@@ -74,56 +74,4 @@ fs.readdir("./cmds", (err, files) => {
 
     jsfiles.forEach((f, i) => {
         let props = require(`./cmds/${f}`);
-        console.log(`${i + 1}: ${f} loaded!`);
-        bot.commands.set(props.help.name, props);
-    });
-});
-                    
-bot.on("ready", async () => {
-console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${bot.users.size} użytkownikach!`);  
-
-        
-bot.user.setStatus('Online')
-
-
-try {
-    let link = await bot.generateInvite(["ADMINISTRATOR"]);
-    console.log(link);
-    } catch(e) {
-        console.log(e.stack);
-        }
-});
-       
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;  
-
-    let messageArray = message.content.split(" ");
-    let command = messageArray[0];
-    let args = messageArray.slice(1);
-
-    if(!command.startsWith(prefix)) return;
-
-    let cmd = bot.commands.get(command.slice(prefix.length));
-    if(cmd) cmd.run(bot, message, args);
-    
-});
-
-// Nadawanie rangi po wejściu użytkownika na serwer.
-
-bot.on ("guildMemberAdd", member => {  
-
-    var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
-    member.addRole (role);
-});
-
-bot.on ("guildMemberRemove", member => {
-
-});  
-
-bot.on("guildMemberAdd", function(member){
-    member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
-
-});
-    
-bot.login(process.env.token);
+        console.log(`${i + 1}: ${f
