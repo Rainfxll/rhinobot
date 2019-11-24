@@ -9,6 +9,14 @@ const prefix = botSettings.prefix
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+try {
+    let link = await bot.generateInvite(["ADMINISTRATOR"]);
+    console.log(link);
+    } catch(e) {
+        console.log(e.stack);
+        }
+});
+
 // Check every 30 seconds for changes
 setInterval(function() {
   console.log('Getting stats update..')
@@ -74,4 +82,25 @@ fs.readdir("./cmds", (err, files) => {
 
     jsfiles.forEach((f, i) => {
         let props = require(`./cmds/${f}`);
-        console.log(`${i + 1}: ${f
+        console.log(`${i + 1}: ${f} loaded!`);
+        bot.commands.set(props.help.name, props);
+    });
+});
+
+client.on ("guildMemberAdd", member => {  
+
+    var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
+    member.addRole (role);
+})
+
+client.on ("guildMemberRemove", member => {
+
+})  
+
+// Wiadomość powitalna.
+
+client.on("guildMemberAdd", function(member){
+    member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
+});
+
+bot.login(process.env.token);
