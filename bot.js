@@ -9,14 +9,6 @@ const prefix = botSettings.prefix
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-try {
-    let link = await bot.generateInvite(["ADMINISTRATOR"]);
-    console.log(link);
-    } catch(e) {
-        console.log(e.stack);
-        }
-});
-
 // Check every 30 seconds for changes
 setInterval(function() {
   console.log('Getting stats update..')
@@ -87,15 +79,23 @@ fs.readdir("./cmds", (err, files) => {
     });
 });
 
+try {
+    let link = await bot.generateInvite(["ADMINISTRATOR"]);
+    console.log(link);
+    } catch(e) {
+        console.log(e.stack);
+        }
+});
+
 client.on ("guildMemberAdd", member => {  
 
     var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
     member.addRole (role);
-})
+});
 
 client.on ("guildMemberRemove", member => {
 
-})  
+}) ; 
 
 // Wiadomość powitalna.
 
