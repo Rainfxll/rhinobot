@@ -23,6 +23,7 @@ bot.on ("message", (message) => {
         mention.sendMessage (mentionMessage);
         message.channel.send ("Wysłano!")
     }
+});
 
 bot.on('message', (message) => {
 if(message.content.startsWith('!weryfikacja')) {
