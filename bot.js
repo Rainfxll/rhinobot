@@ -4,7 +4,7 @@ const fs = require("fs");
 const ytdl = require("ytdl-core");
 const request = require("request");
 const client = new Discord.Client();
-const prefix = "r!";
+const prefix = botSettings.prefix
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
