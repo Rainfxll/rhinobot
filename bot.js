@@ -71,15 +71,7 @@ bot.channels.get("648090668933316608").setName(`» | Serwery: ${bot.guilds.size}
     }, 500) 
 
 });
-
-try {
-    let link = await bot.generateInvite(["ADMINISTRATOR"]);
-    console.log(link);
-    } catch(e) {
-        console.log(e.stack);
-        }
-});
-     
+    
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;  
