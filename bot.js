@@ -72,7 +72,7 @@ const serverStats = {
     totalUserID: '648103250549014572', //Total Users : 0
     memberCountID: '648103267699785750', //Member Count : 0
     botCountID: '648103666355666956' //Bot Count: 0
-};
+});
     
 bot.on('guildMemberAdd', member =>{
 
