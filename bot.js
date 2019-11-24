@@ -66,32 +66,7 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
 bot.user.setStatus('Online')
 
 bot.user.setActivity("rhinobot | 2.8", { type: "STREAMING", url: "https://www.twitch.tv/something" })
-    
-const serverStats = {
-    guildID: '647529848495013918', //Guild ID
-    totalUserID: '648103250549014572', //Total Users : 0
-    memberCountID: '648103267699785750', //Member Count : 0
-    botCountID: '648103666355666956' //Bot Count: 0
-}
-    
-bot.on('guildMemberAdd', member =>{
-
-    if(member.guild.id !== serverStats.guildID) return;
-
-    bot.channels.get(serverStats.totalUserID).setName(`» | Wszyscy : ${member.guild.memberCount}`); //Total
-    bot.channels.get(serverStats.memberCountID).setName(`» | Użytkownicy : ${member.guild.members.filter(m => !m.user.bot).size}`); //Member
-    bot.channels.get(serverStats.botCountID).setName(`» | Boty : ${member.guild.members.filter(m => m.user.bot).size}`) //Bot
-
-bot.on('guildMemberRemove', member =>{
-
-    if(member.guild.id !== serverStats.guildID) return;
-
-    bot.channels.get(serverStats.totalUserID).setName(`» | Wszyscy : ${member.guild.memberCount}`);
-    bot.channels.get(serverStats.memberCountID).setName(`» | Użytkownicy : ${member.guild.members.filter(m => !m.user.bot).size}`);
-    bot.channels.get(serverStats.botCountID).setName(`» | Boty : ${member.guild.members.filter(m => m.user.bot).size}`)
-});
-
-    
+       
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;  
@@ -123,7 +98,8 @@ bot.on ("guildMemberRemove", member => {
 bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 })
-
+    
+});
 bot.login(process.env.token);
 
 //restart
