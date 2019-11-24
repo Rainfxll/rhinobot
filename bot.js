@@ -85,7 +85,6 @@ try {
     } catch(e) {
         console.log(e.stack);
         }
-});
 
 client.on ("guildMemberAdd", member => {  
 
