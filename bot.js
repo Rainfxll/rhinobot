@@ -86,7 +86,6 @@ bot.on ("guildMemberAdd", member => {
 
     var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
     member.addRole (role);
-})
 });
 
 bot.on ("guildMemberRemove", member => {  
