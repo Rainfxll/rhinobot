@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+kkconst Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   const verlvl = {
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Założyciel", message.guild.owner, inline)
     .addField("Region", message.guild.region, inline)
     .addField("Level Weryfikacji", verlvl[message.guild.verificationLevel],inline)
-    .addField("Użytkownicy", `<:busts_in_silhouette: 424958082691629057> ${message.guild.memberCount}`, inline)
+    .addField("Użytkownicy", `<:busts_in_silhouette:424958082691629057> ${message.guild.memberCount}`, inline)
     .addField("Role", message.guild.roles.size, inline)
     .addField("Kanały", message.guild.channels.size, inline)
     .addField("Dołączyłeś", message.member.joinedAt)
