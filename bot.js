@@ -9,33 +9,11 @@ const prefix = botSettings.prefix
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-// Get our server
-const guild = bot.guilds.get('647529848495013918');
-
-// Get our stats channels
-const totalUsers = bot.channels.get('648103250549014572');
-const codeMonkeys = bot.channels.get('648103666355666956');
-
 // Check every 30 seconds for changes
 setInterval(function() {
   console.log('Getting stats update..')
-
-  //Get actual counts
-  var onlineCount = guild.member.filter(m => m.presence.status === 'online').size
-  var coderCount = guild.roles.get('647943681185153044').members.size;
   
-  // Log counts for debugging
-  console.log("Total Users: " + userCount);
-  console.log("Coders: " + coderCount);
-
-  // Set channel names
-  totalUsers.setName("Total Users: " + userCount)
-  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-  .catch(console.error);
-
-  codeMonkeys.setName("Coders: " + coderCount)
-  .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-  .catch(console.error);
+  bot.channels.get("648103250549014572").setName(`Servers: ${bot.guilds.size}/100`)
   }, 30000)
 
 bot.on ("message", (message) => {
