@@ -30,17 +30,6 @@ setInterval(function() {
   bot.channels.get("648103267699785750").setName(`» | Użytkownicy: ${bot.users.size}`)
   }, 30000)
 
-let statuses = [
-    "r!help | 2.8",
-    "rhinobot | 2.8",
-    `serwery: ${bot.guilds.size}/1 | 2.8`
-]
-
-setInterval(function() {
-    let status = statuses[Math.floor(Math.random() * statuses.length)];
-    bot.user.setActivity(status, {type: "WATCHING"});
-
- }, 5000)
 
 bot.on ("message", (message) => {
 
