@@ -65,9 +65,9 @@ console.log(`Bot jest gotowy do pracy przy ${bot.guilds.size} serwerach oraz ${b
     
 dbl.postStats(bot.guilds.size);
  
-*setInterval(() => {
-        dbl.postStats(bot.guilds.size);
-    }, 1800000); *    
+setInterval(() => {
+       dbl.postStats(bot.guilds.size);
+   }, 1800000);    
     
 bot.user.setStatus('Online')
 
