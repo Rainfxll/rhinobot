@@ -12,6 +12,7 @@ bot.on('message', (message) => {
 if(message.content.startsWith('!weryfikacja')) {
 message.member.addRole(role = "647911726662287370").catch(console.error);
 message.member.addRole(role = "647971547658846239").catch(console.error);
+message.channel.bulkDelete(args[0]).then(()
 }
 });
 
@@ -19,6 +20,7 @@ bot.on('message', (message) => {
 if(message.content.startsWith('!akceptuje')) {
 message.member.addRole(role = "647971394432270367").catch(console.error);
 message.member.removeRole(role = "647971547658846239").catch(console.error);
+message.channel.bulkDelete(args[0]).then(()
 }
 });
 
