@@ -81,19 +81,19 @@ fs.readdir("./cmds", (err, files) => {
     });
 });
 
-client.on ("guildMemberAdd", member => {  
+bot.on ("guildMemberAdd", member => {  
 
-    var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
+var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
     member.addRole (role);
 });
 
-client.on ("guildMemberRemove", member => {
+bot.on ("guildMemberRemove", member => {
 
 }) ; 
 
 // Wiadomość powitalna.
 
-client.on("guildMemberAdd", function(member){
+bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 });
 
