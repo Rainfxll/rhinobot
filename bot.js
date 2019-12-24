@@ -92,7 +92,7 @@ bot.on ("guildMemberRemove", member => {
 
 // Wiadomość powitalna.
 
-bo.on("guildMemberAdd", function(member){
+bot.on("guildMemberAdd", function(member){
     member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
 });
 
