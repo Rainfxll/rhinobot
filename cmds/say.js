@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args) => {
     
-    if(message.author.id === "448410421339095041") return
+    if(message.author.id === "632975599119630356") return
     if(message.author.id === "485494651835383828") return
     
     const sayMessage = args.join(" ");
