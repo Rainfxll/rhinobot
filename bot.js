@@ -23,6 +23,8 @@ const antiSpam = new AntiSpam({
     // And many more options... See the documentation.
 });
 
+bot.on('message', (message) => antiSpam.message(message));
+
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
