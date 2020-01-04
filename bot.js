@@ -4,6 +4,24 @@ const fs = require("fs");
 const request = require("request");
 const client = new Discord.Client();
 const prefix = botSettings.prefix;
+const AntiSpam = require('discord-anti-spam');
+const antiSpam = new AntiSpam({
+    warnThreshold: 3, // Amount of messages sent in a row that will cause a warning.
+    kickThreshold: 7, // Amount of messages sent in a row that will cause a ban.
+    banThreshold: 7, // Amount of messages sent in a row that will cause a ban.
+    maxInterval: 2000, // Amount of time (in milliseconds) in which messages are considered spam.
+    warnMessage: '{@user}, Przestań spamować!', // Message that will be sent in chat upon warning a user.
+    kickMessage: '**{user_tag}** Został wyrzucony za spam, niech troche ochłonie.', // Message that will be sent in chat upon kicking a user.
+    banMessage: '**{user_tag}** Został zbanowany za spam!', // Message that will be sent in chat upon banning a user.
+    maxDuplicatesWarning: 7, // Amount of duplicate messages that trigger a warning.
+    maxDuplicatesKick: 10, // Amount of duplicate messages that trigger a warning.
+    maxDuplicatesBan: 12, // Amount of duplicate messages that trigger a warning.
+    exemptPermissions: [ 'ADMINISTRATOR'], // Bypass users with any of these permissions.
+    ignoreBots: true, // Ignore bot messages.
+    verbose: true, // Extended Logs from module.
+    ignoredUsers: [], // Array of User IDs that get ignored.
+    // And many more options... See the documentation.
+});
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
