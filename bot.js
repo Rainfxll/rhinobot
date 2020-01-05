@@ -81,7 +81,7 @@ fs.readdir("./cmds", (err, files) => {
 
 bot.on ("guildMemberAdd", member => {  
 
-var role = member.guild.roles.find ("name", "» | Oczekuję na rejestrację!");
+var role = member.guild.roles.find ("name", "» | Zarejestrowany/a");
     member.addRole (role);
 });
 
@@ -92,7 +92,11 @@ bot.on ("guildMemberRemove", member => {
 // Wiadomość powitalna.
 
 bot.on("guildMemberAdd", function(member){
-    member.guild.channels.find("name", "🌠┃powitalnia").send("(**SYSTEM**) Powitajmy użytkownika o nazwie @"  +  member.user.username )
+    member.guild.channels.find("name", "🌠┃witamy").send("(**SYSTEM**) Powitajmy użytkownika o nazwie :) @"  +  member.user.username )
+});
+
+bot.on("guildMemberRemove", function(member){
+    member.guild.channels.find("name", "🌠┃zegnamy").send("(**SYSTEM**) Zegnamy użytkownika o nazwie :( @"  +  member.user.username )
 });
 
 bot.login(process.env.token);
