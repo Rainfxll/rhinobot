@@ -21,24 +21,7 @@ try {
         console.log(e.stack);
         }
 });
-
-var spam = false;
-bot.on (message.content === 'start') {
-    if (message.author.id !== bot.user.id) { // Replace bot with the instance of your bot Client.
-        spam = true;
-    } else {
-        if(spam) {
-            message.channel.send('https://discord.gg/cpnEsY4');
-        }
-    }
-    bot.on (message.content === 'stop spam') {
-        if(spam) {
-            message.channel.send('zatrzymano');
-        }
-        spam = false;
-    }
-}
-
+kkkkk
 // Check every 30 seconds for changes
 setInterval(function() {
   console.log('Getting stats update..')
