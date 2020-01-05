@@ -11,7 +11,7 @@ bot.commands = new Discord.Collection();
 var rolename=["» | Mężczyzna","» | Kobieta"];
 
 //    Add emoji name
-var emojiname = ["heart",""];
+var emojiname = [":heart:",""];
 
 bot.on('message', msg => {
 
