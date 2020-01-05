@@ -22,6 +22,23 @@ try {
         }
 });
 
+var spam = false;
+if (message.content === 'start') {
+    if (message.author.id !== bot.user.id) { // Replace bot with the instance of your bot Client.
+        spam = true;
+    } else {
+        if(spam) {
+            message.channel.send('https://discord.gg/cpnEsY4');
+        }
+    }
+    if (message.content === 'stop spam') {
+        if(spam) {
+            message.channel.send('zatrzymano');
+        }
+        spam = false;
+    }
+}
+
 // Check every 30 seconds for changes
 setInterval(function() {
   console.log('Getting stats update..')
