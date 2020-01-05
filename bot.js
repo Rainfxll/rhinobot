@@ -9,15 +9,8 @@ bot.commands = new Discord.Collection();
 
 //    Add role name
 var rolename=["» | Mężczyzna","» | Kobieta"];
-
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}`);
-});
-
-
-
-client.on('message', msg => {
+k
+bot.on('message', msg => {
 
 if(msg.content.startsWith(prefix+"reaction")){
   if(!msg.channel.guild) return;
@@ -32,7 +25,7 @@ if(msg.content.startsWith(prefix+"reaction")){
 
 
 
-client.on("messageReactionAdd",(reaction,user)=>{
+bot.on("messageReactionAdd",(reaction,user)=>{
   if(!user) return;
   if(user.bot)return;
   if(!reaction.message.channel.guild) return;
@@ -45,7 +38,7 @@ client.on("messageReactionAdd",(reaction,user)=>{
 });
 
 
-client.on("messageReactionRemove",(reaction,user)=>{
+bot.on("messageReactionRemove",(reaction,user)=>{
   if(!user) return;
   if(user.bot)return;
   if(!reaction.message.channel.guild) return;
