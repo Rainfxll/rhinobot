@@ -1,5 +1,5 @@
 const botSettings = require("./botsettings.json")
-const Discord = require("discord.js");
+const Discord = require("discord.js");k
 const fs = require("fs");
 const request = require("request");
 const client = new Discord.Client();
