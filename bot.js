@@ -26,8 +26,8 @@ try {
 setInterval(function() {
   console.log('Getting stats update..')
   
-  bot.channels.get("Stats1").setName(`» | Serwery: ${bot.guilds.size}/2`)
-  bot.channels.get("Stats2").setName(`» | Użytkownicy: ${bot.users.size}`)
+  bot.channels.find("name", "Stats1").setName(`» | Serwery: ${bot.guilds.size}/2`)
+  bot.channels.find("name", "Stats2").setName(`» | Użytkownicy: ${bot.users.size}`)
   }, 30000)
 
 bot.on("message", async message => {
