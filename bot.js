@@ -185,7 +185,6 @@ msg.channel.send("Error, user not found.")
             console.log(err)
         }
     }
-});
 
 bot.on('message', function() {
     if (message.content === "$loop") { 
