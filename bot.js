@@ -21,7 +21,7 @@ try {
         console.log(e.stack);
         }
 });
-kkkkk
+
 // Check every 30 seconds for changes
 setInterval(function() {
   console.log('Getting stats update..')
