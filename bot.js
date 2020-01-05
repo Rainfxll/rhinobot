@@ -22,6 +22,14 @@ try {
         }
 });
 
+bot.on('message', function() {
+    if (message.content === "$loop") { 
+      var interval = setInterval (function () {
+        message.channel.send("123")
+      }, 1 * 1000); 
+    }
+});
+
 // Check every 30 seconds for changes
 setInterval(function() {
   console.log('Getting stats update..')
